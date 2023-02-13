@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  
+  <body>   
+    <header>
+    <a href="http://www.umbc.edu">
+    <img src="https://styleguide.umbc.edu/wp-content/uploads/sites/113/2019/01/UMBC-primary-logo-RGB-1024x236.png" height=40">
+    </a>
+    </header>
+    <h1 style="color:blue;font-size:32px">UMBC Campus</h1>
+    <p>The University of Maryland, Baltimore County is a public research university in Baltimore County, Maryland. UMBC offers an inclusive culture that connects innovative teaching and learning, research across disciplines, and civic engagement. Whatever your passion, at UMBC you will find a program that challenges and excites you, and a community that supports you. The UMBC community is committed to helping you achieve excellence as a student and beyond.</p>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.25/"></script>
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+    <style>
+</style>
+    <script>
+      require([
+      "esri/Map",
+      "esri/views/MapView"
+    ], function(
+      Map,
+      MapView
+    ) {
+      const map = new Map({
+    	  basemap: "hybrid"
+      });
+
+      // center the view over 48 states
+      const view = new MapView({
+        container: "viewDiv",
+        map: map,
+        center: [-76.7115, 39.2532],
+        zoom: 15
+      });
+      
+    });
+    </script>
+    
+  </head>
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
